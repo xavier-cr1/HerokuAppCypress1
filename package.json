@@ -6,7 +6,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "cy:open": "cypress open",
-    "cy:run": "cypress run --browser chrome"
+    "cy:run": "cypress run --browser chrome",
+    "cy:open:docker": "cypress open --config-file cypress/config/appSettingsDocker.json",
+    "cy:open:local": "cypress open --config-file cypress/config/appSettingsLocal.json",
+    "cy:run:docker": "cypress run --config-file cypress/config/appSettingsDocker.json",
+    "cy:run:local": "cypress run --config-file cypress/config/appSettingsLocal.json"
   },
   "repository": {
     "type": "git",
