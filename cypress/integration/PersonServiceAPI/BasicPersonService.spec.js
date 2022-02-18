@@ -1,9 +1,11 @@
+const peopleResource = '/people'
+
 describe('Basic Person Service Tests', () => {
     
     it('Get people from express server', () => {
       cy.request({
           method: 'GET',
-          url: 'http://localhost:49160/people'
+          url: Cypress.config('baseUrl') + peopleResource
           
       }).then((res) => {
           expect(res.status).to.eq(200)
